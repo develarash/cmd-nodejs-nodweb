@@ -1,0 +1,170 @@
+{
+  "name": "@nodeeweb/server",
+  "version": "0.1.54",
+  "type": "module",
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@pepco/nodejs-rest-sdk": "^0.2.2",
+    "axios": "^0.27.2",
+    "babel-plugin-module-name-mapper": "^1.2.0",
+    "basic-ftp": "^5.0.3",
+    "bcrypt": "^5.0.1",
+    "cheerio": "^1.0.0-rc.12",
+    "commondir": "^1.0.1",
+    "connect-busboy": "^1.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
+    "deep-equal": "^2.0.5",
+    "dotenv": "^16.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "express": "^4.18.1",
+    "express-sitemap-xml": "^3.0.1",
+    "googleapis": "^118.0.0",
+    "ignore-styles": "^5.0.1",
+    "isbot": "^3.4.6",
+    "js2xmlparser": "^5.0.0",
+    "lodash": "^4.17.21",
+    "mime": "^3.0.0",
+    "moment": "^2.29.4",
+    "moment-jalaali": "^0.9.6",
+    "mongoose": "^6.3.2",
+    "morgan": "^1.10.0",
+    "mssql": "^9.1.1",
+    "node-cron": "^3.0.2",
+    "npm-run-all": "^4.1.5",
+    "openai": "^3.1.0",
+    "path": "^0.12.7",
+    "persianjs": "^0.4.0",
+    "pkg-dir": "^7.0.0",
+    "pkg-up": "^4.0.0",
+    "prettier": "^2.7.1",
+    "pug": "^3.0.2",
+    "rand-token": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
+    "request-ip": "^3.3.0",
+    "shelljs": "^0.8.5",
+    "ssh2-sftp-client": "^9.1.0",
+    "string-math": "^1.2.2",
+    "typescript": "^4.9.3",
+    "useragent": "^2.3.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "scripts": {
+    "babel-version": "babel-node --version",
+    "build": "babel . --config-file ./babel.config-pro.json -d . --out-file-extension .bundle.js",
+    "wizard": "node wizard",
+    "start": "set BABEL_CACHE_PATH=./node_modules/babel-cache.json && babel-node --config-file ./babel.config-dev.json ./src/bin/www.mjs",
+    "dev": "nodemon",
+    "dev:script": "node src/bin/www.mjs",
+    "serve": "node src/bin/www.mjs"
+  },
+  "bin": "./cli.js",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@craco/craco": "^6.4.3",
+    "@types/node-cron": "^3.0.7",
+    "define-variable-webpack-plugin": "^1.0.1",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "fs": "^0.0.1-security",
+    "ftp-deploy": "^2.4.2",
+    "nodemon": "^2.0.16",
+    "sass": "^1.56.1"
+  },
+  "imports": {
+    "#json/*": "./src/*.json",
+    "#v/*": "./*.js",
+    "#root/*": "./src/*.mjs",
+    "#models/*": "./src/models/*.mjs",
+    "#controllers/*": "./src/controllers/*.mjs",
+    "#routes/*": "./src/routes/*.mjs",
+    "#assets/*": "./src/client/assets/*",
+    "#c/*": "./src/client/*.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier",
+      "react"
+    ],
+    "rules": {
+      "import/no-anonymous-default-export": 0,
+      "prettier/prettier": 0,
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "semi": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://idehweb.com/product/nodeeweb",
+  "keywords": [
+    "core",
+    "nodeeweb core",
+    "express",
+    "cms",
+    "api",
+    "page builder",
+    "create website",
+    "create application",
+    "react ssr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idehweb/nodeeweb-server"
+  },
+  "bugs": {
+    "url": "https://github.com/idehweb/nodeeweb-server/issues"
+  },
+  "main": "index.mjs"
+}
